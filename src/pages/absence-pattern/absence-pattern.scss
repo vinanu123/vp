@@ -1,0 +1,37 @@
+page-absence-pattern {
+ion-grid #from, ion-grid #to
+{
+    border:1px solid grey;
+    border-radius: 5%;
+    text-align:center;
+    background-color: rgb(0, 120, 196);
+    color: white;
+    font-weight: bold;
+    box-shadow: 1px 1px 2px rgb(25, 26, 27);
+
+}
+.input:disabled{
+    color: black !important;
+}
+.calender .grid
+{
+    background: #ffffff;
+    box-shadow: 0px 0px 9px 1px #b3b3b3;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+#label-choose
+{
+    margin-left: 22%;
+    // border: 1px solid rgb(0, 120, 196);
+    
+}
+.icon-calendar
+{
+    color:rgb(0, 120, 196);
+    font-size:3rem;
+    position:absolute!important ;
+    top: 21%!important;
+    right: 6%!important;
+}
+}

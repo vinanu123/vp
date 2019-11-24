@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>My Profile</ion-title>
+  </ion-navbar>
+
+</ion-header>
+<ion-content padding>
+  <div text-center>
+    <h2 class="welcome" color="primary">Welcome, Good Day {{uname}}</h2>
+
+    <img class="profile-img" src="assets/imgs/profile.jpg">
+  </div>
+
+
+  <ion-list radio-group [(ngModel)]="action">
+
+    <ion-item *ngFor="let data of myProfile">
+      <ion-label item-right>{{data.text}}</ion-label>
+      <ion-radio item-left value="{{data.value}}"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <div text-center>
+    <button margin-left margin-top text-center ion-button (click)="profileDetail()">PROCEED</button>
+  </div>
+
+  <ion-label  color="primary" text-center class="notification">Notifications <ion-icon name="notifications-outline"></ion-icon>
+  </ion-label>
+
+</ion-content>

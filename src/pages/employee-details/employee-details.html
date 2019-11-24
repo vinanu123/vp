@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Employee Details</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div margin>
+    <ion-label>First Name</ion-label>
+    <ion-input [(ngModel)]="fname" type="text"></ion-input>
+
+    <ion-label>Middle Name</ion-label>
+    <ion-input [(ngModel)]="mname" type="text"></ion-input>
+
+    <ion-label>Last Name</ion-label>
+    <ion-input [(ngModel)]="lname" type="text"></ion-input>
+
+    <ion-label>SSN</ion-label>
+    <ion-input [(ngModel)]="ssn" type="number"></ion-input>
+
+    <ion-label>Date of Birth</ion-label>
+    <ion-input (click)="showCalender()" [value]="selectedValue" readonly></ion-input>
+    <ion-calendar #calendar *ngIf="isCalender" id="calender" (onDaySelect)="onDateSelect($event)"></ion-calendar>
+
+    <ion-label>Gender</ion-label>
+    <ion-list radio-group class="gender" margin-top>
+      <ion-grid>
+        <ion-row>
+          <ion-col>
+            <ion-label text-right>Male</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-radio value="Male" margin-top margin-right></ion-radio>
+          </ion-col>
+          <ion-col>
+            <ion-label text-right>Female</ion-label>
+          </ion-col>
+          <ion-col>
+            <ion-radio value="Female" margin-top margin-right></ion-radio>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+    </ion-list>
+
+    <ion-label>Employer's Name</ion-label>
+    <ion-input [(ngModel)]="employer" type="text"></ion-input>
+
+    <ion-label>Control Number</ion-label>
+    <ion-input [(ngModel)]="ctrlno" type="number"></ion-input>
+
+    <ion-label>Work State</ion-label>
+    <ion-input [(ngModel)]="workstate" type="text"></ion-input>
+
+    <div text-center>
+        <button ion-button margin-top (click)="proceedNext()">NEXT</button>
+    </div>
+
+
+  </div>
+</ion-content>

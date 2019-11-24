@@ -6,20 +6,39 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-
+import { ProfilePage } from '../pages/profile/profile';
+import { EmployeeDetailsPage } from '../pages/employee-details/employee-details';
+import { FileClaimPage } from '../pages/file-claim/file-claim';
+import { CalendarModule } from 'ionic3-calendar-en';
+import { ChildInfoPage } from '../pages/child-info/child-info';
+import { AbsencePatternPage } from '../pages/absence-pattern/absence-pattern';
+import { ApsInfoPage } from '../pages/aps-info/aps-info';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    ProfilePage,
+    EmployeeDetailsPage,
+    FileClaimPage,
+    ChildInfoPage,
+    AbsencePatternPage,
+    ApsInfoPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    CalendarModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
+    ProfilePage,
+    EmployeeDetailsPage,
+    FileClaimPage,
+    ChildInfoPage,
+    AbsencePatternPage,
+    ApsInfoPage
   ],
   providers: [
     StatusBar,

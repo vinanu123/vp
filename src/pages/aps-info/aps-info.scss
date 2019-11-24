@@ -1,0 +1,19 @@
+page-aps-info {
+    .btn-attach
+    {
+        position: absolute;
+        top: 8%;
+        right: 7%;
+    }
+    .no-border .item-inner
+    {
+        border:  none !important;
+    }
+    .show-suc
+    {
+        border: 1px solid #0078c4;
+        max-width: 50%;
+        margin-left: 25% !important; 
+        border-radius: 10px;
+    }
+}

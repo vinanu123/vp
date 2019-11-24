@@ -1,0 +1,48 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Child Information</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div margin>
+    <ion-label>Relationship</ion-label>
+    <ion-select okText="OK" cancelText="" class="input">
+      <ion-option value="Please select one" selected>Please select one</ion-option>
+      <ion-option value="Son">Son</ion-option>
+      <ion-option value="daughter">Daughter</ion-option>
+    </ion-select>
+
+    <ion-label>First Name</ion-label>
+    <ion-input [(ngModel)]="fname" type="text"></ion-input>
+
+    <ion-label>MI</ion-label>
+    <ion-input [(ngModel)]="mi" type="text"></ion-input>
+
+    <ion-label>Last Name</ion-label>
+    <ion-input [(ngModel)]="lname" type="text"></ion-input>
+
+    <ion-label>SSN</ion-label>
+    <ion-input [(ngModel)]="ssn" type="number"></ion-input>
+
+    <ion-label>Date of Birth</ion-label>
+    <ion-input (click)="showCalender()" [value]="selectedValue" readonly></ion-input>
+    <ion-calendar #calendar *ngIf="isCalender" id="calender" (onDaySelect)="onDateSelect($event)"></ion-calendar>
+
+    <ion-list radio-group margin-top>
+      <ion-item>
+        <ion-label>Minor (under 18)</ion-label>
+        <ion-radio value="minor" margin-top margin-right></ion-radio>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Adult with Disability</ion-label>
+        <ion-radio value="adult" margin-top margin-right></ion-radio>
+      </ion-item>
+    </ion-list>
+
+    <div text-center>
+      <ion-icon class="arrow-next" color="primary" name="arrow-round-forward" (click)="proceed()"></ion-icon>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,109 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Absence Pattern</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+  <div margin>
+
+    <h5>Absence from Work</h5>
+
+    <ion-list radio-group>
+      <ion-item>
+        <ion-radio item-left value="continuous" margin-top margin-right></ion-radio>
+        <ion-label item-right>Continuous Absence</ion-label>
+      </ion-item>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <ion-label id="from">From</ion-label>
+          </ion-col>
+          <ion-col col-6>
+            <ion-label id="to">To</ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col col-6>
+            <ion-input [value]="selectedValueFrom" (click)="showCalenderFrom()"  disabled>
+            </ion-input>
+            <ion-icon float-right class="icon-calendar" name="calendar"></ion-icon>
+
+          </ion-col>
+
+          <ion-col col-6>
+            <ion-input [value]="selectedValueTo" (click)="showCalenderTo()"  disabled></ion-input>
+            <ion-icon float-right class="icon-calendar" name="calendar"></ion-icon>
+
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+            <ion-calendar #calendar1 *ngIf="isCalenderFrom" class="calender" (onDaySelect)="onDateSelectFrom($event)">
+            </ion-calendar>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col col-12>
+            <ion-calendar #calendar2 *ngIf="isCalenderTo" class="calender" (onDaySelect)="onDateSelectTo($event)">
+            </ion-calendar>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-item>
+        <ion-radio item-left value="intermittent" margin-top margin-right></ion-radio>
+        <ion-label item-right>Intermittent Absence</ion-label>
+      </ion-item>
+
+      <h6 id="label-choose">Choose Days from Calendar</h6>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col col-6>
+            <ion-label id="from">From</ion-label>
+          </ion-col>
+          <ion-col col-6>
+            <ion-label id="to">To</ion-label>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <!-- <ion-col col-6>
+            <ion-input (click)="showCalender()" [value]="selectedValue" readonly></ion-input>
+            <ion-icon float-right class="icon-calendar" name="calendar"></ion-icon>
+            <ion-calendar #calendar3 *ngIf="isCalender" id="calender" (onDaySelect)="onDateSelect($event)">
+            </ion-calendar>
+          </ion-col>
+
+          <ion-col col-6>
+            <ion-input (click)="showCalender()" [value]="selectedValue" readonly></ion-input>
+            <ion-icon float-right class="icon-calendar" name="calendar"></ion-icon>
+            <ion-calendar #calendar *ngIf="isCalender" id="calender" (onDaySelect)="onDateSelect($event)">
+            </ion-calendar>
+          </ion-col> -->
+        </ion-row>
+        <ion-row>
+          <!-- <ion-col col-6>
+              <ion-input (click)="showCalender()" [value]="selectedValue" readonly></ion-input>
+              <ion-icon float-right class="icon-calendar" name="calendar"></ion-icon>
+              <ion-calendar #calendar *ngIf="isCalender" id="calender" (onDaySelect)="onDateSelect($event)">
+              </ion-calendar>
+            </ion-col>
+  
+            <ion-col col-6>
+              <ion-input (click)="showCalender()" [value]="selectedValue" readonly></ion-input>
+              <ion-icon float-right class="icon-calendar" name="calendar"></ion-icon>
+              <ion-calendar #calendar *ngIf="isCalender" id="calender" (onDaySelect)="onDateSelect($event)">
+              </ion-calendar>
+            </ion-col> -->
+        </ion-row>
+      </ion-grid>
+    </ion-list>
+  </div>
+  <div text-center>
+    <ion-icon class="arrow-next" color="primary" name="arrow-round-forward" (click)="proceed()"></ion-icon>
+  </div>
+</ion-content>

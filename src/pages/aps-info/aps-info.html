@@ -10,35 +10,36 @@
 
     <ion-list radio-group>
       <ion-item>
-        <ion-radio item-left value="available" margin-top margin-right></ion-radio>
+        <ion-radio item-left value="available" margin-top margin-right (ionSelect)="onAvailable()"></ion-radio>
         <ion-label item-right>Available</ion-label>
-        
       </ion-item>
-      <button ion-button class="btn-attach" *ngIf="isAvailable">Attach</button>
+      <button ion-button class="btn-attach" *ngIf="isAvailable" (click)="onOpenFile()">Attach</button>
+
       <ion-item>
-          <ion-radio item-left value="unavailable" margin-top margin-right></ion-radio>
-          <ion-label item-right>Unavailable</ion-label>
-        </ion-item>
+        <ion-radio item-left value="unavailable" margin-top margin-right (ionSelect)="onUnavailable()"></ion-radio>
+        <ion-label item-right>Unavailable</ion-label>
+      </ion-item>
     </ion-list>
-    <ion-item no-border-bottom class="no-border" >
-        <ion-checkbox item-left [(ngModel)]="accept" ></ion-checkbox>
-        <ion-label item-right>I accept the <a href="#">Terms and Conditions</a></ion-label>
+
+    <ion-item no-border-bottom class="no-border">
+      <ion-checkbox item-left [(ngModel)]="accept"></ion-checkbox>
+      <ion-label item-right>I accept the <a href="#">Terms and Conditions</a></ion-label>
     </ion-item>
-    
+
     <div text-center *ngIf="!isTermChecked">
-        <button ion-button color="primary" (click)="onCheckBox()" tappable>SUBMIT</button>
+      <button ion-button color="primary" (click)="onCheckBox()" tappable>SUBMIT</button>
     </div>
 
     <ion-item *ngIf="isTermChecked" margin-top class="no-border">
       <p text-center>
-        Claim Generated Succesfully
+        Claim generated successfully.!
       </p>
       <p text-center>
-        Your Claim Number is : 485890430958
-        Please check Your Notification inbox
+        Your Claim Number is: 485890430<br>
+        Please check your notification inbox
       </p>
-      <p text-center padding margin class="show-suc">
-        <span padding margin>Thank you</span> 
+      <p text-center padding margin class="show-success">
+        <span  margin>Thank you</span>
       </p>
     </ion-item>
   </div>

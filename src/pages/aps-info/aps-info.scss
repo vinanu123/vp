@@ -9,11 +9,14 @@ page-aps-info {
     {
         border:  none !important;
     }
-    .show-suc
+    .show-success
     {
         border: 1px solid #0078c4;
         max-width: 50%;
         margin-left: 25% !important; 
         border-radius: 10px;
+    }
+    .item-md.item-block .item-inner {
+        padding-right: 0px!important;
     }
 }

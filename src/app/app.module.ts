@@ -13,6 +13,7 @@ import { CalendarModule } from 'ionic3-calendar-en';
 import { ChildInfoPage } from '../pages/child-info/child-info';
 import { AbsencePatternPage } from '../pages/absence-pattern/absence-pattern';
 import { ApsInfoPage } from '../pages/aps-info/aps-info';
+import { FileChooser } from '@ionic-native/file-chooser';
 @NgModule({
   declarations: [
     MyApp,
@@ -43,7 +44,8 @@ import { ApsInfoPage } from '../pages/aps-info/aps-info';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    FileChooser
   ]
 })
 export class AppModule {}

@@ -7,54 +7,62 @@ import { ApsInfoPage } from '../aps-info/aps-info';
   templateUrl: 'absence-pattern.html',
 })
 export class AbsencePatternPage {
-  selectedValue: string;
   isCalender: any;
-  isCalenderTo:any;
-  selectedValueFrom:any;
-  selectedValueTo:any;
-  isCalenderFrom:any;
+  isCalenderTo: any;
+  selectedValueFrom: any;
+  selectedValueTo: any;
+  isCalenderFrom: any;
+
+  isCalenderInt: any;
+  isCalenderIntTo: any;
+  selectedValueIntFrom: any;
+  selectedValueIntTo: any;
+  isCalenderIntFrom: any;
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
-  // onDateSelect(date){
-  //   console.log(date)
-  //   this.selectedValue = date.date+'-'+(date.month+1)+'-'+date.year;
-  //   this.showCalender();
-  // }
-  
-  // showCalender()
-  // {
-  //   console.log(this.isCalender)
-  //   this.isCalenderFrom = !this.isCalenderFrom;
-  // }
-  onDateSelectFrom(date){
-    console.log(date)
-    this.selectedValueFrom = date.date+'-'+(date.month+1)+'-'+date.year;
-    this.isCalenderFrom = !this.isCalenderFrom;
-    // this.showCalender();
-  }
-  
-  showCalenderFrom()
-  {
-    console.log(this.isCalender)
+  showCalenderFrom() {
     this.isCalenderFrom = !this.isCalenderFrom;
   }
-  onDateSelectTo(date){
-    console.log(date)
-    this.selectedValueTo = date.date+'-'+(date.month+1)+'-'+date.year;
-    this.isCalenderTo = !this.isCalenderTo;
-    // this.showCalender();
-  }
-  
-  showCalenderTo()
-  {
-    console.log(this.isCalender)
+
+  showCalenderTo() {
     this.isCalenderTo = !this.isCalenderTo;
   }
 
-  proceed()
+  onDateSelectTo(date) {
+    this.selectedValueTo = date.date + '-' + (date.month + 1) + '-' + date.year;
+    this.isCalenderTo = !this.isCalenderTo;
+  }
+
+  onDateSelectFrom(date) {
+    this.selectedValueFrom = date.date + '-' + (date.month + 1) + '-' + date.year;
+    this.isCalenderFrom = !this.isCalenderFrom;
+  }
+  
+
+  showCalenderIntFrom()
   {
+    this.isCalenderIntFrom = !this.isCalenderIntFrom;
+  }
+
+  showCalenderIntTo()
+  {
+    this.isCalenderIntTo = !this.isCalenderIntTo;
+  }
+  onDateSelectIntFrom(date)
+  {
+    this.selectedValueIntFrom = date.date + '-' + (date.month + 1) + '-' + date.year;
+    this.isCalenderIntFrom = !this.isCalenderIntFrom;
+  }
+  onDateSelectIntTo(date)
+  {
+    this.selectedValueIntTo = date.date + '-' + (date.month + 1) + '-' + date.year;
+    this.isCalenderIntTo = !this.isCalenderIntTo;
+  }
+
+  proceed() {
     this.navCtrl.push(ApsInfoPage);
   }
+
 }

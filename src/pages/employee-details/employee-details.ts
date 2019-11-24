@@ -18,7 +18,7 @@ export class EmployeeDetailsPage {
   isCalender:any;
   selectedValue:any;
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.isCalender = false; // check the calender status
+    this.isCalender = false; 
   }
   
   proceedNext() {

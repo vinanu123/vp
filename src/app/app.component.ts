@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { HomePage } from '../pages/home/home';
 // import { EmployeeDetailsPage } from '../pages/employee-details/employee-details';
 // import { FileClaimPage } from '../pages/file-claim/file-claim';
-import { ChildInfoPage } from '../pages/child-info/child-info';
+// import { ChildInfoPage } from '../pages/child-info/child-info';
 // import { AbsencePatternPage } from '../pages/absence-pattern/absence-pattern';
 import { ApsInfoPage } from '../pages/aps-info/aps-info';
 @Component({
